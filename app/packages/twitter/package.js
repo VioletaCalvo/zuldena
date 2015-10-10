@@ -6,6 +6,7 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.use('templating');
-  api.use(['accounts-twitter', 'twitter'], ['client', 'server']);
+  api.use(['accounts-twitter', 'twitter', 'sewdn:twitter-api'], ['client', 'server']);
   api.addFiles('server/twitter.js','server');
+  api.addFiles('client/twitter.js','client');
 });
