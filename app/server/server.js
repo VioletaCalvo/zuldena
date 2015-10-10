@@ -1,5 +1,18 @@
 Meteor.setInterval(function(){
+			
+// 60 000 so every minutes
 	console.log("Chron en javascript");
 }, 60000);
 
-// 60 000 so every minutes
+Meteor.methods({
+
+	// Should return rss Feed
+	scrapeRssFeed:function(url){
+		return Scrape.feed(url);
+	},
+
+	// Should scrape a website
+	scrapeWebsite:function(url){
+		return Scrape.website(url);
+	}
+});
