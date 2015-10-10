@@ -27,3 +27,9 @@ FlowRouter.route('/feed', {
   },
   name: 'feed'
 });
+
+FlowRouter.route('/scrape', {
+  action: function() {
+    BlazeLayout.render("feedLayout", {content: "scrape"});
+  }
+});
