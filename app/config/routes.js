@@ -10,3 +10,9 @@ FlowRouter.route('/feed', {
     BlazeLayout.render("feedLayout", {content: "feed"});
   }
 });
+
+FlowRouter.route('/scrape', {
+  action: function() {
+    BlazeLayout.render("feedLayout", {content: "scrape"});
+  }
+});
