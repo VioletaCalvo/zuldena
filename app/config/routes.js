@@ -6,13 +6,11 @@ FlowRouter.route('/', {
   name:'home'
 });
 
-
 FlowRouter.route('/signup', {
   action: function() {
     BlazeLayout.render("mainLayout", {content: "signup"});
   }
 });
-
 
 FlowRouter.route('/signin', {
   action: function() {
@@ -20,12 +18,25 @@ FlowRouter.route('/signin', {
   }
 });
 
-
-FlowRouter.route('/feed', {
+FlowRouter.route('/feeds', {
   action: function() {
     BlazeLayout.render("feedLayout", {content: "feed"});
   },
-  name: 'feed'
+  name: 'feeds'
+});
+
+FlowRouter.route('/feeds/:provider', {
+  action: function() {
+    BlazeLayout.render("feedLayout", {content: "feedDetails"});
+  },
+  name: 'feedDetails'
+});
+
+FlowRouter.route('/settings', {
+  action: function() {
+    BlazeLayout.render("feedLayout", {content: "settings"});
+  },
+  name: 'settings'
 });
 
 FlowRouter.route('/scrape', {
@@ -33,3 +44,9 @@ FlowRouter.route('/scrape', {
     BlazeLayout.render("feedLayout", {content: "scrape"});
   }
 });
+
+FlowRouter.notFound = {
+    action: function() {
+      BlazeLayout.render("notFound");
+    }
+};
