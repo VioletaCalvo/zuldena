@@ -1,3 +1,53 @@
 <template name="sidebar">
-	Navigation
+	<div class=" profile">
+
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+
+				<div class="profile-userpic">
+					
+					{{#if currentUser.imageUrl}}
+						<img src="{{currentUser.imageUrl}}" class="img-responsive" alt="">
+					{{else}}
+						<img src="/img/user.png" class="img-responsive" alt="">
+					{{/if}}
+				</div>
+				
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						{{#if currentUser.profile.name}}
+							{{currentUser.profile.name}}
+						{{else}}
+							Unknown user
+						{{/if}}
+					</div>
+				
+				</div>
+				<!-- END SIDEBAR USER TITLE -->
+		
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Feeds </a>
+						</li>
+						<li>
+							<a href="#">
+							<i class="glyphicon glyphicon-user"></i>
+							 Settings </a>
+						</li>
+						<li>
+							<a class="logout-btn">
+							<i class="fa fa-power-off"></i>
+							Logout 
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+	
+	</div>
 </template>
