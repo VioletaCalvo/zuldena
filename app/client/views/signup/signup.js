@@ -25,7 +25,7 @@ Template.signup.events({
 						toastr.error(error.reason, 'Error'); 
 					}
 					else {
-						FlowRouter.go('feed');
+						FlowRouter.go('feeds');
 						toastr.success('Account created', 'Registration'); 
 					}
 				}); 

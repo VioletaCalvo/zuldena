@@ -28,13 +28,13 @@
 				<!-- SIDEBAR MENU -->
 				<div class="profile-usermenu">
 					<ul class="nav">
-						<li class="active">
-							<a href="#">
+						<li class="{{isActiveRoute regex='feeds|feedsDetails'}}">
+							<a href="/feeds">
 							<i class="glyphicon glyphicon-home"></i>
 							Feeds </a>
 						</li>
-						<li>
-							<a href="#">
+						<li class="{{isActiveRoute name='settings'}}">
+							<a href="/settings">
 							<i class="glyphicon glyphicon-user"></i>
 							 Settings </a>
 						</li>

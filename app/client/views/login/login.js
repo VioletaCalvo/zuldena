@@ -35,7 +35,7 @@ Template.login.events({
                 toastr.error(error.reason, 'Error'); 
             }
             else {
-                FlowRouter.go('feed'); 
+                FlowRouter.go('feeds'); 
                 toastr.success('You are logged in'); 
             }
         }); 
