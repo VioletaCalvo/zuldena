@@ -76,6 +76,7 @@ retry@1.0.4
 routepolicy@1.0.6
 service-configuration@1.0.5
 session@1.1.1
+sewdn:twitter-api@0.1.2
 sha@1.0.4
 spacebars@1.0.7
 spacebars-compiler@1.0.7
