@@ -1,4 +1,4 @@
-Template.socialButtons.events({
+Template.settings.events({
 	'click .btn-facebook': function (evt, tmpl) {
 		toastr.warning('NOT IMPLEMENTED');
 	},
@@ -14,4 +14,4 @@ Template.socialButtons.events({
 	'click .btn-instagram': function (evt, tmpl) {
 		toastr.warning('NOT IMPLEMENTED');
 	}
-})
+});

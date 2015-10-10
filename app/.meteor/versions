@@ -97,5 +97,6 @@ underscore@1.0.4
 url@1.0.5
 webapp@1.2.2
 webapp-hashing@1.0.5
-zuldana:twitter@1.0.0
 wizonesolutions:underscore-string@1.0.0
+zimme:active-route@2.3.2
+zuldana:twitter@1.0.0
