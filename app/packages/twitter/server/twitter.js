@@ -1,6 +1,20 @@
-
 processReponse = function (reponse) {
-  console.log(reponse);
+  var fields = {
+    service: 'twitter',
+    userId: Meteor.userId(),
+    text: reponse.data[0].text,
+    name: reponse.data[0].user.name,
+    createdAt: reponse.data[0].created_at
+  };
+  ApisInformations.insert(fields);
+  var fieldtwo = {
+    service: 'twitter',
+    userId: Meteor.userId(),
+    text: reponse.data[1].text,
+    name: reponse.data[1].user.name,
+    createdAt: reponse.data[1].created_at
+  };
+  ApisInformations.insert(fieldtwo);
 };
 
 
