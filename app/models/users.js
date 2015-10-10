@@ -1,0 +1,2 @@
+// Collections
+Users = Meteor.users;
