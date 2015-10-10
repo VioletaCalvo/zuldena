@@ -2,7 +2,8 @@
 FlowRouter.route('/', {
   action: function() {
     BlazeLayout.render("mainLayout", {content: "home"});
-  }
+  },
+  name:'home'
 });
 
 
@@ -23,5 +24,6 @@ FlowRouter.route('/signin', {
 FlowRouter.route('/feed', {
   action: function() {
     BlazeLayout.render("feedLayout", {content: "feed"});
-  }
+  },
+  name: 'feed'
 });

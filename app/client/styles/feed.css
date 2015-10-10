@@ -3,4 +3,8 @@
     position:fixed;
     color: #fff;
   }
-.content {background-color:#f7f7f7;min-height:800px;}
+.content {
+	background-color:#f7f7f7;
+	min-height:800px;
+	color:#2C2265;
+}

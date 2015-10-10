@@ -21,3 +21,23 @@ Accounts.ui.config({
         visible: true,
     }]
 });
+
+Template.login.events({
+    'submit form': function(evt, tmpl) {
+        evt.preventDefault();
+        
+        var form        = evt.target;
+        var email       = form.email.value;
+        var password    = form.password.value;
+
+        Meteor.loginWithPassword(email, password, function (error) {
+            if (error) {
+                toastr.error(error.reason, 'Error'); 
+            }
+            else {
+                FlowRouter.go('feed'); 
+                toastr.success('You are logged in'); 
+            }
+        }); 
+    }
+})
