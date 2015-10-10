@@ -1,0 +1,291 @@
+/* === GENERAL === */
+body, html {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 28px;
+	color: #222;
+}
+
+body, h1, h2, h3, h4, h5, h6, p{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+
+/* === TYPOGRAPHY === */
+h1 {
+	font-size: 3.5em;
+	line-height: 1.3em;
+	font-weight: 100;
+}
+
+h2 {
+	font-size: 3em;
+	line-height: 1.3em;
+	font-weight: 100;
+}
+
+/* === DELAY PAGE LOAD === */
+#loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: 50% 50% rgb(250,250,250);
+}
+
+/* === TRANSITION EFFECT  === */
+a, .icon-color, .form-control, .features, .owl-theme .owl-controls .owl-page span {
+	transition: all 0.25s ease;
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;
+}
+
+/* === HEADER TITLE  === */
+.header-title {
+	padding-bottom: 50px;
+}
+
+/* === LINE HEADER TITLE  === */
+.line-left-color, .line-left-white {
+	float: left;
+	width: 200px;
+}
+
+.line-center-color, .line-center-white {
+	text-align: center;
+	width: 200px;
+}
+
+/* === SECTION HEADER  === */
+#section-header {
+	background-image: url(/img/bg_header.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.parallax {
+	background-attachment: fixed;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	height: auto;
+	position: relative;
+}
+
+#section-header .bg-overlay-header {
+	background-color: rgba(0, 0, 0, 0.7);
+	height: auto;
+	padding: 50px 0;
+}
+
+#section-header .intro {
+	color: #fff;
+	padding-top: 5%;
+	padding-bottom: 15%;
+}
+
+.logo {
+	font-weight: 400;
+}
+
+#section-header .intro-message  {
+	margin-bottom: 50px;
+}
+
+#section-header .button-download {
+	margin-top: 25px;
+}
+
+/* === SECTION OVERVIEW  === */
+#section-overview {
+	padding: 50px 0;
+}
+
+/* === SECTION FEATURE  === */
+#section-feature {
+	padding: 50px 0;
+}
+
+#section-feature .feature-1 {
+	background-color: #f7f7f7;
+	padding: 100px 0;
+}
+
+#section-feature .feature-2  {
+	background-color: #ffffff;
+	padding: 100px 0;
+}
+
+#section-feature .feature-header {
+	display: block;
+	margin-bottom: 60px;
+}
+
+#section-feature .feature-image {
+	max-width: 300px;
+	margin: auto;
+}
+
+#section-feature .feature-image img{
+	width: 100%;
+}
+
+#section-feature .fa {
+	margin-right: 5px;
+}
+
+#section-feature .feature-list {
+	color: #fff;
+	height: auto;
+	background-image: url(/img/bg_list_feature.jpg);
+	background-attachment: fixed;
+	background-position: center center; 
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#section-feature .feature-list .bg-overlay-feature-list {
+	background-color: rgba(0, 0, 0, 0.7);
+	height: auto;
+	padding: 50px 0;
+}
+
+#section-feature .feature-list .features {
+	color: rgba(255, 2550, 255, 0.5);	
+}
+
+#section-feature .feature-list .features:hover {
+	color: rgba(255, 2550, 255, 1);
+}
+
+#section-feature .feature-list .feature-list-image {
+	max-width: 220px;
+	margin: auto;
+}
+
+#section-feature .feature-list .feature-list-image img{
+	width: 100%;
+}
+
+#section-feature .feature-list-left .feature-list-icon {
+	float: right;
+	margin-top: 25px;
+}
+#section-feature .feature-list-left .feature-list-detail {
+	float: left;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+#section-feature .feature-list-right .feature-list-icon {
+	float: left;
+	margin-top: 25px;
+}
+
+#section-feature .feature-list-right .feature-list-detail {
+	float: right;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+/* === SECTION GALLERY  === */
+#section-gallery {
+	background-color: #f7f7f7;
+  	padding: 50px 0;
+}
+
+#section-gallery #owl-slide .item {
+	margin: 15px;
+	border: 2px solid #f7f7f7;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+#section-gallery #owl-slide .item img {
+  	display: block;
+  	width: 100%;
+  	height: auto;
+}
+
+/* === SECTION FEEDBACK  === */
+#section-feedback {
+	color: #fff;
+	height: auto;
+	background-image: url(/img/bg_feedback.jpg);
+	background-attachment: fixed;
+	background-position: center center; 
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#section-feedback .bg-overlay-feedback {
+	background-color: rgba(0, 0, 0, 0.7);
+	height: auto;
+	padding: 50px 0;
+}
+
+#section-feedback .feedback-user {
+	max-width: 760px;
+	margin: auto;
+}
+
+#section-feedback .feedback-user .feedback-message{
+	margin-top: 25px;
+}
+
+#section-feedback .owl-theme .owl-controls .owl-page span {
+	background: #fff;
+}
+
+/* === SECTION DOWNLOAD  === */
+#section-download {
+	padding: 50px 0;
+}
+
+/* === SECTION CONTACT  === */
+#section-contact {
+	padding: 50px 0;
+}
+
+#section-contact .contact {
+	max-width: 760px;
+	margin: auto;
+}
+
+#section-contact .contact .form-control {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+}
+
+#section-contact .contact .input-box {
+	height: 50px;
+	margin-bottom: 25px;
+}
+
+#section-contact .contact .textarea-box {
+	margin-bottom: 25px;
+}
+
+#section-contact .contact .button-send {
+	width: 100%;
+}
+
+/* === SECTION FOOTER  === */
+#section-footer {
+	padding-top: 100px;
+	padding-bottom: 200px;
+}/* CSS goes here */

@@ -1,0 +1,23 @@
+<template name="feedLayout">
+<div class="wrapper">
+
+  <div class="row">
+    
+    <div class="col-xs-2 left">
+      <div class="navigation">
+        {{>sidebar}}
+      </div>
+    </div> <!-- /col-md-2 navigation -->
+    
+    
+    <div class="col-xs-8 col-md-10 content">  
+      
+        {{>Template.dynamic template=content}}
+      
+      
+    </div> <!-- /col-md-10 content -->
+    
+  </div> <!-- /row -->
+  
+</div>
+</template>

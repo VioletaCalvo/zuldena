@@ -1,0 +1,111 @@
+<template name="home">
+	<!-- LOAD PAGE -->
+   <!-- <div id="loader"></div> -->
+
+	{{> valueProposition}}
+	{{> features}}
+	{{> footer}}
+    
+</template>
+
+
+<template name="myhome">
+
+
+  	<!-- SECTION FADEBACK -->
+    <div id="section-feedback">
+    	<div class="bg-overlay-feedback">
+            <div class="container">
+
+                <div class="header-title text-center wow fadeInUp" data-wow-duration="1s">
+                    <h2>What Say People</h2>
+                        <p>Vestibulum rutrum vitae felis sit amet facilisis Duis iaculis adipiscing velit.</p>
+                    <hr class="line-center-white">
+                </div>
+
+                <!-- FADEBACK -->
+                <div class="feedback-user text-center wow fadeInUp" data-wow-duration="1s">
+                    <!-- OWL FEEDBACK ITEM -->
+                    <div id="owl-feedback" class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="feedback-photo">
+                                <img class="img-circle" src="img/feedback_1.jpg" alt="feedback-user">
+                            </div>
+                            <div class="feedback-message">
+                                <p>Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet.</p>
+                                <p>- Tony Stark -</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="feedback-photo">
+                                <img class="img-circle" src="img/feedback_2.jpg" alt="feedback-user">
+                            </div>
+                            <div class="feedback-message">
+                                <p>Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet.</p>
+                                <p>- Steve Rogers -</p>
+                            </div>
+                        </div> 
+                        <div class="item">
+                            <div class="feedback-photo">
+                                <img class="img-circle" src="img/feedback_3.jpg" alt="feedback-user">
+                            </div>
+                            <div class="feedback-message">
+                                <p>Morbi in dui quis est pulvinar ullamcorper. Nulla facilisi. Integer lacinia sollicitudin massa. Cras metus. Sed aliquet risus a tortor. Integer id quam. Morbi mi. Quisque nisl felis, venenatis tristique, dignissim in, ultrices sit amet, augue. Proin sodales libero eget ante. Nulla quam. Aenean laoreet.</p>
+                                <p>- Natasha Romanoff -</p>
+                            </div>
+                        </div> 
+                    </div>
+                    <!-- /END OWL FEEDBACK ITEM -->
+
+                </div>
+                <!-- /END FADEBACK -->
+
+            </div>
+        </div>
+    </div>
+	<!-- /END SECTION FADEBACK -->
+
+
+	<!-- SECTION CONTACT -->
+    <div id="section-contact">
+    	<div class="container">
+            <div class="contact">
+
+                <div class="header-title text-center wow fadeInUp" data-wow-duration="1s">
+                    <h2>Contact Form</h2>
+                        <p>Vestibulum rutrum vitae felis sit amet facilisis Duis iaculis adipiscing velit.</p>
+                    <hr class="line-center-color">
+                </div>
+
+                <!-- CONTACT FORM -->
+                <form method="post" id="FormContact" class="contact-form" role="form">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control input-box wow fadeInUp" name="name" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control input-box wow fadeInUp" name="email" id="email" placeholder="Email address" required>
+                        </div>
+                        <div class="col-md-12">
+                            <input type="text" class="form-control input-box wow fadeInUp" name="subject" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="col-md-12">
+                            <textarea class="form-control textarea-box wow fadeInUp" rows="6" name="message" id="message" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-primary btn-lg button-send wow fadeInUp"><i class="fa fa-envelope-o"></i></button>
+                        </div>
+                        <div class="col-md-12">
+                            <div id="result" class="text-center wow fadeIn"></div>
+                        </div>
+                    </div>
+                </form>
+                <!-- /END CONTACT FORM -->
+
+            </div>
+        </div>
+    </div>
+	<!-- /END SECTION CONTACT -->
+
+
+</template>
