@@ -6,6 +6,7 @@ Template.scrape.events({
 						if(error){
 							$('#scrape_result').append("<p class='confirmation-not-ok'>Votre site n'a pas été enregistré</p>");
 						}else{
+							PersonalSites.insert({user_id:Meteor.userId(), url:website});
 							$('#scrape_result').append("<p class='confirmation-ok'>Votre site est désormais enregistré</p>");
 						}
 		});
