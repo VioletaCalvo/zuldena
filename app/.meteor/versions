@@ -77,6 +77,7 @@ rate-limit@1.0.0
 reactive-dict@1.1.2
 reactive-var@1.0.6
 reload@1.1.4
+renaldo:youtube-api@0.0.1
 retry@1.0.4
 routepolicy@1.0.6
 service-configuration@1.0.5
@@ -97,5 +98,5 @@ underscore@1.0.4
 url@1.0.5
 webapp@1.2.2
 webapp-hashing@1.0.5
-zuldana:twitter@1.0.0
 wizonesolutions:underscore-string@1.0.0
+zuldana:twitter@1.0.0
