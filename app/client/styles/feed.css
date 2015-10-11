@@ -8,3 +8,8 @@
 	min-height:800px;
 	padding: 40px;
 }
+.tweet {
+	font-style: italic;
+    font-size: 12px;
+    border-bottom: 1px solid grey;
+}

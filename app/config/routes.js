@@ -20,7 +20,7 @@ FlowRouter.route('/signin', {
 
 FlowRouter.route('/feeds', {
   action: function() {
-    BlazeLayout.render("feedLayout", {content: "feed"});
+    BlazeLayout.render("feedLayout", {content: "feeds"});
   },
   name: 'feeds'
 });

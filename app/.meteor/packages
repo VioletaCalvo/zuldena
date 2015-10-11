@@ -24,7 +24,6 @@ ian:accounts-ui-bootstrap-3
 twbs:bootstrap
 accounts-facebook
 http
-bozhao:link-accounts
 zuldana:twitter
 kadira:blaze-layout
 fortawesome:fontawesome
@@ -39,3 +38,6 @@ service-configuration
 accounts-google
 renaldo:youtube-api
 zuldena:youtube
+facebook
+bozhao:link-accounts
+jeeeyul:moment-with-langs
