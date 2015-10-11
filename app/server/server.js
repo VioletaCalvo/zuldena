@@ -1,7 +1,4 @@
 Meteor.setInterval(function(){
-			
-// 60 000 so every minutes
-	console.log("Chron en javascript");
 }, 60000);
 
 Meteor.methods({
