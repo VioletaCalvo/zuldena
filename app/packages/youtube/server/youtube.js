@@ -3,11 +3,11 @@ processReponse = function (result) {
   _.each(result.items, function(video) {
     var videoId = video.id.videoId;
     alreadyInDb = ApisInformations.findOne({itemId:videoId});
-    if (alreadyInDb != undefined) {
+    if (alreadyInDb !== undefined) {
       var fields = {
-        // itemId: videoId,
+        //itemId: videoId,
         service: 'youtube',
-        // userId: Meteor.userId(),
+        userId: Meteor.userId(),
         url: "https://www.youtube.com/watch?v=" + videoId
       };
 
@@ -20,14 +20,27 @@ processReponse = function (result) {
 };
 
 Meteor.startup(function (){
-  YoutubeApi.authenticate({
-  	type:'oauth',
-  	token: Users.findOne(Meteor.userId).services.google.accessToken
-  });
-  YoutubeApi.authenticate({
-    type: 'key',
-    key: Meteor.settings.GoogleKey
-  });
+  var token = '';
+  var user =  Users.findOne(Meteor.userId);
+
+  Tracker.autorun(function () {
+     if (Meteor.userId) {
+
+         Tracker.nonreactive(function() {
+            if (user && user.services && user.services.google && user.services.google.accessToken) {
+                YoutubeApi.authenticate({
+                	type:'oauth',
+                	token: Users.findOne(Meteor.userId).services.google.accessToken
+                });
+
+                YoutubeApi.authenticate({
+                  type: 'key',
+                  key: Meteor.settings.GoogleKey
+                });
+              }
+          });
+      }
+    });
 });
 
 Meteor.methods({
@@ -41,7 +54,9 @@ Meteor.methods({
         q: search,
     }, function (error, data) {
         if (!error) {
-          ApisInformationdata
+          console.warn('youtube is buggy!');
+          // TODO fix this
+          //processReponse(data);
         }
     });
   }
