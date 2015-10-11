@@ -3,11 +3,11 @@ processReponse = function (result) {
   _.each(result.items, function(video) {
     var videoId = video.id.videoId;
     alreadyInDb = ApisInformations.findOne({itemId:videoId});
-    if (alreadyInDb != undefined) {
+    if (alreadyInDb !== undefined) {
       var fields = {
-        // itemId: videoId,
+        //itemId: videoId,
         service: 'youtube',
-        // userId: Meteor.userId(),
+        userId: Meteor.userId(),
         url: "https://www.youtube.com/watch?v=" + videoId
       };
 
@@ -41,7 +41,9 @@ Meteor.methods({
         q: search,
     }, function (error, data) {
         if (!error) {
-          ApisInformationdata
+          console.warn('youtube is buggy!');
+          // TODO fix this
+          //processReponse(data);
         }
     });
   }

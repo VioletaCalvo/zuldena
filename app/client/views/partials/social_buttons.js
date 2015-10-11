@@ -1,34 +1,17 @@
 Template.socialButtons.events({
 	'click .btn-facebook': function (evt, tmpl) {
-		Meteor.linkWithFacebook({}, function (error) {
-			if (error) {
-				toastr.error(error.reason);
-			}
-			else {
-				FlowRouter.go('feeds');
-				toastr.success("Facebook account connected!");
-			}
-		}); 
+		toastr.warning('not already implemented!');
 	},
 
 	'click .btn-twitter': function (evt, tmpl) {
-		Meteor.linkWithFacebook({}, function (error) {
-			if (error) {
-				toastr.error(error.reason);
-			}
-			else {
-				FlowRouter.go('feeds');
-				toastr.success("Twitter account connected!");
-
-			}
-		}); 
+		toastr.warning('not already implemented!');
 	},
 
 	'click .btn-youtube': function (evt, tmpl) {
-		toastr.warning('NOT IMPLEMENTED');
+		toastr.warning('not already implemented!');
 	},
 
 	'click .btn-instagram': function (evt, tmpl) {
-		toastr.warning('NOT IMPLEMENTED');
+		toastr.warning('not already implemented!');
 	}
-})
+});
