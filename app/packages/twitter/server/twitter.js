@@ -66,13 +66,11 @@ processReponse = function (reponse) {
 //   }
 // });
 
-if(Meteor.isServer){
-  var twitter  = new TwitterApi();
-  Meteor.methods({
-    getUserTweets:function(){
-      self = this.userId ;
-      reponse = twitter.homeTimeline();
-      processReponse(reponse);
-    }
-  });
-}
+var twitter  = new TwitterApi();
+Meteor.methods({
+  getUserTweets:function(){
+    self = this.userId ;
+    reponse = twitter.homeTimeline();
+    processReponse(reponse);
+  }
+});
