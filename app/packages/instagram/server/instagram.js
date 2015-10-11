@@ -1,15 +1,19 @@
 processReponse = function (reponse) {
-  console.dir(reponse.data[0].link);
-  var fields = {
-    service: 'instagram',
-    link: reponse.data[0].link,
-    userId: Meteor.userId(),
-    text: reponse.data[0].caption.text || "texte par défaut",
-    imageUrl: reponse.data[0].images.standard_resolution.url,
-    name: reponse.data[0].user.username,
-    createdAt: reponse.data[0].created_time
-  };
-  ApisInformations.insert(fields);
+  _.each(reponse.data, function(instagram) {
+    if (!ApisInformations.findOne({itemId:instagram.id})) {
+      var fields = {
+        itemId: instagram.id,
+        service: 'instagram',
+        link: instagram.link,
+        userId: Meteor.userId(),
+        text: instagram.caption.text || "texte par défaut",
+        imageUrl: instagram.images.standard_resolution.url,
+        name: instagram.user.username,
+        createdAt: new Date(parseInt(instagram.created_time) * 1000)
+      };
+      ApisInformations.insert(fields);
+    }
+  });
 };
 
 Meteor.methods({
