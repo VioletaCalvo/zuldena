@@ -1,7 +1,7 @@
 Meteor.startup(function () {
   Tracker.autorun(function () {
     if (Meteor.userId()){
-      Meteor.call('getUserTweets');
+      Meteor.call('searchVideo');
     }
   });
 });
