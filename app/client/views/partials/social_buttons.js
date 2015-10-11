@@ -1,17 +1,17 @@
 Template.socialButtons.events({
 	'click .btn-facebook': function (evt, tmpl) {
-		toastr.warning('not already implemented!');
+		Meteor.loginWithFacebook();
 	},
 
 	'click .btn-twitter': function (evt, tmpl) {
-		toastr.warning('not already implemented!');
+		Meteor.loginWithTwitter();
 	},
 
 	'click .btn-youtube': function (evt, tmpl) {
-		toastr.warning('not already implemented!');
+		Meteor.loginWithGoogle();
 	},
 
 	'click .btn-instagram': function (evt, tmpl) {
-		toastr.warning('not already implemented!');
+		Meteor.loginWithInstagram();
 	}
 });

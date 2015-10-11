@@ -53,8 +53,12 @@
 							<ul class="list-unstyled">
 								{{#each instagram}}
 									<li class="instagram">
-										<div class="instagram-img">
-											<img src='{{this.imgUrl}}' />
+										<div class="instagram-post">
+											<img src='{{this.imageUrl}}' class="instagram-img" />
+											<div class="instagram-info">
+												<div class="istagram-name"> {{this.name}} </div>
+												<div class="istagram-text"> {{this.text}} </div>
+											</div>
 										</div>
 									</li>
 								{{/each}}
