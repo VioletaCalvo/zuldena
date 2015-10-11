@@ -1,5 +1,5 @@
 <template name="feeds">
-	     
+
 	     	<div class="row">
 	     		<div class="col-md-6">
 	     			<div class="panel panel-info">
@@ -17,20 +17,17 @@
 		     		<div class="panel panel-info">
 					  <div class="panel-heading">
 					    <h3 class="panel-title"><a href="/feeds/twitter">Twitter</a></h3>
+					</div>
 					  </div>
 					  <div class="panel-body">
 					  <ul class="list-unstyled">
-					  	
 					    {{# each twitterFeed}}
 					    	<li class="tweet">
-				
 					    		{{this.text}}
-
 					    	</li>
 					    {{/each}}
 					  </ul>
 					  </div>
-					</div>
 	     		</div>
 	     	</div>
 
@@ -48,20 +45,27 @@
 	     		</div>
 
 	     		<div class="col-md-6">
-	     		
+
 	     		<div class="panel panel-info">
-				  <div class="panel-heading">
+				  	<div class="panel-heading">
 				    <h3 class="panel-title"><a href="/feeds/instagram">Instagram</a></h3>
-				  </div>
-				  <div class="panel-body">
-				    Panel content
-				  </div>
-				</div>
+						<div class="panel-body">
+							<ul class="list-unstyled">
+								{{#each instagram}}
+									<li class="instagram">
+										<div class="instagram-img">
+											<img src='{{this.imgUrl}}' />
+										</div>
+									</li>
+								{{/each}}
+							</ul>
+						</div>
+						</div>
+
+					</div>
 
 	     		</div>
 
-	     	</div>
+	     	 </div>
 
-	 
-    
 </template>
