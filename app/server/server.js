@@ -16,3 +16,21 @@ Meteor.methods({
 		return Scrape.website(url);
 	}
 });
+
+if(Meteor.isServer){
+	Meteor.methods({
+		getMyVideos:function(){
+			YoutubeApi.authenticate({
+				type:'oauth',
+				token: Users.find(Meteor.userId()).services.google.accessToken
+			});
+			YoutubeApi.channels.list({
+			    "part": "id",
+			    "mySubscribers": true,
+			    "maxResults": 50
+			}, function (err, data) {
+			    console.log(err, data);
+			});
+		}	
+	});
+}
