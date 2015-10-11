@@ -11,5 +11,12 @@ Meteor.methods({
 	// Should scrape a website
 	scrapeWebsite:function(url){
 		return Scrape.website(url);
-	}
+	},
+	
+	// Get the html from an other page
+	getHtmlContent: function(url, userId){
+		return $.get(url, function(data){
+			PersonnalSites.insert({contenu:String(data), url:url, userId:userId});
+		} 
+	 }
 });
