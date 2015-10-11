@@ -18,15 +18,16 @@ processReponse = function (reponse) {
 
 Meteor.methods({
   getUserInstagrams:function(){
-    self = this.userId ;
-    accessToken = Users.findOne(Meteor.userId()).services.instagram.accessToken;
-    endpoint =
-      "https://api.instagram.com/v1/users/self/feed?access_token=" +
-       accessToken;
-    HTTP.get (endpoint, function (error, result) {
-      if (!error) {
-        processReponse(result.data);
-      }
-    });
+    if (Users.findOne(Meteor.userId()).services.instagram) {
+      accessToken = Users.findOne(Meteor.userId()).services.instagram.accessToken;
+      endpoint =
+        "https://api.instagram.com/v1/users/self/feed?access_token=" +
+        accessToken;
+      HTTP.get (endpoint, function (error, result) {
+        if (!error) {
+          processReponse(result.data);
+        }
+      });
+    }
   }
 });

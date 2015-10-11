@@ -18,8 +18,9 @@ processReponse = function (reponse) {
 var twitter  = new TwitterApi();
 Meteor.methods({
   getUserTweets:function(){
-    self = this.userId ;
-    reponse = twitter.homeTimeline();
-    processReponse(reponse);
+    if (Users.findOne(Meteor.userId()).services.twitter) {
+      reponse = twitter.homeTimeline();
+      processReponse(reponse);
+    }
   }
 });
