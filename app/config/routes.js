@@ -42,7 +42,8 @@ FlowRouter.route('/settings', {
 FlowRouter.route('/scrape', {
   action: function() {
     BlazeLayout.render("feedLayout", {content: "scrape"});
-  }
+  },
+  name: 'scrape'
 });
 
 FlowRouter.notFound = {

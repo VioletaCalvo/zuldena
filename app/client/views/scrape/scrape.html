@@ -1,13 +1,36 @@
 <template name="scrape">
 
-	<h1>Entrez votre site ...</h1>
-	<p>Nous effectuerons un scraping pour vous</p>
+	<div class="row">
+	<div class="col-md-8 col-md-offset-2">
 
-	<form>
-		<input type="text" id="scrape_site">
-	  <input id="scrape_submit" type="submit" value="Soumettre site" placeholder="Entrez l'adresse de votre site">
-	</form>
+			<div class="panel panel-info">
+				<div class="panel-body">
 
-	<div id="scrape_result">
+
+					<form class="form-horizontal">
+						<fieldset>
+							<legend>Enter your link</legend>
+
+							<div class="form-group">
+
+								<div class="col-md-9">
+									<input type="text" id="scrape_site" name="scrape_site" class="form-control" placeholder="Link goes here" >
+
+								</div>
+
+								<div class="col-md-3">
+									<button type="submit" class="btn btn-primary">Submit</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+
+
+				</div>
+			</div>
+
+			<div id="scrape_result">
+			</div>
+		</div>
 	</div>
 </template>
