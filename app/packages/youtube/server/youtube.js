@@ -20,14 +20,27 @@ processReponse = function (result) {
 };
 
 Meteor.startup(function (){
-  YoutubeApi.authenticate({
-  	type:'oauth',
-  	token: Users.findOne(Meteor.userId).services.google.accessToken
-  });
-  YoutubeApi.authenticate({
-    type: 'key',
-    key: Meteor.settings.GoogleKey
-  });
+  var token = '';
+  var user =  Users.findOne(Meteor.userId);
+
+  Tracker.autorun(function () {
+     if (Meteor.userId) {
+
+         Tracker.nonreactive(function() {
+            if (user && user.services && user.services.google && user.services.google.accessToken) {
+                YoutubeApi.authenticate({
+                	type:'oauth',
+                	token: Users.findOne(Meteor.userId).services.google.accessToken
+                });
+
+                YoutubeApi.authenticate({
+                  type: 'key',
+                  key: Meteor.settings.GoogleKey
+                });
+              }
+          });
+      }
+    });
 });
 
 Meteor.methods({
