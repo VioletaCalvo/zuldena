@@ -24,7 +24,6 @@ ian:accounts-ui-bootstrap-3
 twbs:bootstrap
 accounts-facebook
 http
-bozhao:link-accounts
 zuldana:twitter
 kadira:blaze-layout
 fortawesome:fontawesome
@@ -33,3 +32,6 @@ underscore
 chrismbeckett:toastr
 anonyfox:scrape
 zimme:active-route
+facebook
+bozhao:link-accounts
+jeeeyul:moment-with-langs

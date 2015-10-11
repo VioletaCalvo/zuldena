@@ -1,4 +1,4 @@
-<template name="feed">
+<template name="feeds">
 	     
 	     	<div class="row">
 	     		<div class="col-md-6">
@@ -19,7 +19,16 @@
 					    <h3 class="panel-title"><a href="/feeds/twitter">Twitter</a></h3>
 					  </div>
 					  <div class="panel-body">
-					    Panel content
+					  <ul class="list-unstyled">
+					  	
+					    {{# each twitterFeed}}
+					    	<li class="tweet">
+				
+					    		{{this.text}}
+
+					    	</li>
+					    {{/each}}
+					  </ul>
 					  </div>
 					</div>
 	     		</div>
