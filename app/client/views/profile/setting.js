@@ -10,7 +10,7 @@ Template.settings.events({
 			else {
 				Meteor.linkWithFacebook({}, function (error) {
 					if (error) {
-						toastr.error(error.reason);
+						toastr.error(error.message);
 					}
 					else {
 						FlowRouter.go('feeds');
@@ -22,21 +22,7 @@ Template.settings.events({
 	},
 
 	'click .btn-twitter': function (evt, tmpl) {
-		if (!_.contains(Accounts.oauth.serviceNames(), 'twitter')) {
-			Meteor.linkWithTwetter({}, function (error) {
-				if (error) {
-					toastr.error(error.reason);
-				}
-				else {
-					FlowRouter.go('feeds');
-					toastr.success("Twitter account connected!");
-
-				}
-			});
-		}
-		else{
-			toastr.success('already configured');
-		}Meteor.call('checkUserServices', 'twitter', function(error, configured) {
+		Meteor.call('checkUserServices', 'twitter', function(error, configured) {
 			if (error) {
 				toastr.error(error.reason);
 			}
@@ -46,7 +32,7 @@ Template.settings.events({
 			else {
 				Meteor.linkWithTwitter({}, function (error) {
 					if (error) {
-						toastr.error(error.reason);
+						toastr.error(error.message);
 					}
 					else {
 						FlowRouter.go('feeds');
@@ -68,7 +54,7 @@ Template.settings.events({
 			else {
 				Meteor.linkWithInstagram({}, function (error) {
 					if (error) {
-						toastr.error(error.reason);
+						toastr.error(error.message);
 					}
 					else {
 						FlowRouter.go('feeds');

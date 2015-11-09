@@ -1,3 +1,19 @@
 {
-  "GoogleKey":"xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  "googleApiKey":"your-google-api-key",
+  "facebook":{
+  	"appId": "your-facebook-app-id",
+  	"secret": "your-secret-facebook-id"
+  },
+  "twitter":{
+  	"consumerKey": "your-twitter-consumer-key",
+  	"secret": "your-secret-twitter-id"
+  },
+  "google":{
+  	"clientId": "your-google-client-id",
+  	"secret": "your-secret-google-id"
+  },
+  "instagram":{
+  	"clientId": "your-instagram-client-id",
+  	"secret": "your-secret-instagram-id"
+  }
 }
