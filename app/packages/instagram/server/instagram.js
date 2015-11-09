@@ -6,11 +6,13 @@ processReponse = function (reponse) {
         service: 'instagram',
         link: instagram.link,
         userId: Meteor.userId(),
-        text: instagram.caption.text || "texte par défaut",
+        text: "-no description-",
         imageUrl: instagram.images.standard_resolution.url,
         name: instagram.user.username,
         createdAt: new Date(parseInt(instagram.created_time) * 1000)
       };
+      if (instagram.caption)
+        fields.text = instagram.caption.text
       ApisInformations.insert(fields);
     }
   });
