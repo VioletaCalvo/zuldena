@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'zuldana:twitter',
+  name: 'zuldena:twitter',
   summary: 'retrieve tweets',
   version: '1.0.0'
 });

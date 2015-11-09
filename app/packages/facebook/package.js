@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'zuldana:facebook',
+  name: 'zuldena:facebook',
   summary: 'retrieve facebook news',
   version: '1.0.0'
 });
